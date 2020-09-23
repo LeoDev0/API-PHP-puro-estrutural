@@ -19,8 +19,8 @@ if ($method === 'get') {
     }
 
 } else {
+    http_response_code(405);
     $result = [
-        http_response_code(405),    
         'error' => 'Method Not Allowed (GET only)'
     ];
 }
