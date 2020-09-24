@@ -24,6 +24,7 @@ if ($method === 'post') {
 
         $id = $pdo->lastInsertId();
 
+        http_response_code(201);
         $result = [
             'id' => $id,
             'title' => $title,
